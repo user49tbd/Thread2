@@ -1,0 +1,19 @@
+package Pack1;
+
+public class T1b extends Thread{
+	private int [][] h;
+	private int i;
+	public T1b(int[][] h,int i){
+		this.h=h;
+		this.i=i;
+		}
+	@Override
+	public void run() {
+		int cont=0;
+		for(int a=0;a<h[0].length;a++) {
+			cont+=h[i][a];
+		}
+		System.out.println(cont+" coluna("+(i+1)+")");
+		super.run();
+	}
+}
